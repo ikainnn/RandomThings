@@ -1,5 +1,4 @@
 #include <array>
-#include <iostream>
 
 constexpr std::size_t string_length(const char* src)
 {
@@ -38,12 +37,10 @@ public:
     static constexpr auto value = _stringArray.data();
 };
 
-constexpr char g_your[] = "Your ";
-constexpr char g_mom[]  = "Mom!\n";
+/*
+Example Usage:
+    constexpr char g_your[] = "Your ";
+    constexpr char g_mom[]  = "Mom!\n";
 
-constexpr auto g_yourMom = StringCat<g_your, g_mom>::value;
-
-int main()
-{
-    std::cout << g_yourMom;
-}
+    constexpr auto g_yourMom = StringCat<g_your, g_mom>::value;
+*/
