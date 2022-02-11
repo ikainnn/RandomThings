@@ -1,4 +1,15 @@
+#ifndef COMPILE_TIME_STRING_CONCATENATION
+#define COMPILE_TIME_STRING_CONCATENATION
+
 #include <array>
+
+/*
+Example Usage:
+    constexpr char g_your[] = "Your ";
+    constexpr char g_mom[]  = "Mom!\n";
+
+    constexpr auto g_yourMom = StringCat<g_your, g_mom>::value;
+*/
 
 inline constexpr std::size_t string_length(const char* src)
 {
@@ -37,10 +48,4 @@ public:
     static constexpr auto value = _stringArray.data();
 };
 
-/*
-Example Usage:
-    constexpr char g_your[] = "Your ";
-    constexpr char g_mom[]  = "Mom!\n";
-
-    constexpr auto g_yourMom = StringCat<g_your, g_mom>::value;
-*/
+#endif
