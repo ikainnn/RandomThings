@@ -11,7 +11,7 @@ Example Usage:
     constexpr auto g_yourMom = StringCat<g_your, g_mom>::value;
 */
 
-inline constexpr std::size_t string_length(const char* src)
+constexpr std::size_t string_length(const char* src)
 {
     for (std::size_t pos{ 0 }; src[pos]; ++pos)
     {
