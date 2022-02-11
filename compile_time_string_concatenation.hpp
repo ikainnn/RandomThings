@@ -1,6 +1,6 @@
 #include <array>
 
-constexpr std::size_t string_length(const char* src)
+inline constexpr std::size_t string_length(const char* src)
 {
     for (std::size_t pos{ 0 }; src[pos]; ++pos)
     {
