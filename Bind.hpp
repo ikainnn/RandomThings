@@ -1,3 +1,6 @@
+#ifndef BIND_HPP
+#define BIND_HPP
+
 #include <functional>
 #include <iostream>
 #include <tuple>
@@ -45,7 +48,6 @@ namespace ws
         static_assert(FunctionTraits<_Function>::argumentsCount && sizeof...(arguments), "Function doesn't take 0 arguments.");
 
         /*        cppcheck moment        */
-        /* cppcheck-suppress syntaxError */
         auto checkTypes = [_arguments = std::make_tuple(arguments...)]<std::size_t... _Indexes>(std::index_sequence<_Indexes...>)
         {
             (is_same_or_placeholder<_Function, _Indexes>(_arguments), ...);
@@ -56,3 +58,5 @@ namespace ws
         return std::bind(func, arguments...);
     }
 }
+
+#endif
