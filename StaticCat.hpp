@@ -6,7 +6,7 @@
 /*
 Example Usage:
     constexpr char g_your[] = "Your ";
-    constexpr char g_mom[]  = "Mom!\n";
+    constexpr char g_mom[]  = "Mommy!\n";
 
     constexpr auto g_yourMom = ws::StringCat<g_your, g_mom>::value;
 */
