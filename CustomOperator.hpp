@@ -1,5 +1,5 @@
-#ifndef USER_DEFINED_OPERATORS_HPP
-#define USER_DEFINED_OPERATORS_HPP
+#ifndef CUSTOMOPERATOR_HPP
+#define CUSTOMOPERATOR_HPP
 
 #include <cstdint>
 #include <concepts>
